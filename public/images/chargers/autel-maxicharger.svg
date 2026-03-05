@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Wall mount -->
+  <rect x="75" y="10" width="50" height="6" rx="2" fill="#a1a1aa"/>
+  <!-- Main body - tall with rounded top -->
+  <path d="M65,30 Q65,16 100,16 Q135,16 135,30 L135,140 Q135,146 129,146 L71,146 Q65,146 65,140 Z" fill="#a1a1aa"/>
+  <path d="M70,34 Q70,22 100,22 Q130,22 130,34 L130,138 Q130,142 126,142 L74,142 Q70,142 70,138 Z" fill="#2a2a2a"/>
+  <!-- Display screen -->
+  <rect x="78" y="40" width="44" height="30" rx="4" fill="#1a1a1a"/>
+  <!-- LED ring -->
+  <circle cx="100" cy="90" r="10" fill="none" stroke="#22c55e" stroke-width="2"/>
+  <circle cx="100" cy="90" r="3" fill="#22c55e"/>
+  <!-- Button -->
+  <rect x="90" y="115" width="20" height="8" rx="4" fill="#a1a1aa"/>
+  <!-- Cable -->
+  <path d="M100,146 C100,155 110,160 110,170" fill="none" stroke="#a1a1aa" stroke-width="3" stroke-linecap="round"/>
+  <!-- Connector -->
+  <rect x="105" y="170" width="12" height="14" rx="3" fill="#f4f4f5"/>
+  <circle cx="111" cy="177" r="2" fill="#a1a1aa"/>
+</svg>

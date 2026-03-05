@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Wall mount plate -->
+  <rect x="82" y="8" width="36" height="6" rx="2" fill="#a1a1aa"/>
+  <!-- Main body - slim tall with curved sides -->
+  <path d="M78,18 Q78,14 82,14 L118,14 Q122,14 122,18 L125,145 Q125,152 118,152 L82,152 Q75,152 75,145 Z" fill="#a1a1aa"/>
+  <path d="M82,20 Q82,17 85,17 L115,17 Q118,17 118,20 L121,143 Q121,148 116,148 L84,148 Q79,148 79,143 Z" fill="#2a2a2a"/>
+  <!-- Curved accent line -->
+  <path d="M85,35 Q100,28 115,35" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <!-- Display -->
+  <rect x="86" y="45" width="28" height="22" rx="3" fill="#1a1a1a"/>
+  <!-- LED strip -->
+  <rect x="92" y="80" width="16" height="3" rx="1.5" fill="#22c55e"/>
+  <!-- Holster/cable wrap area -->
+  <rect x="86" y="100" width="28" height="30" rx="5" fill="#1a1a1a"/>
+  <circle cx="100" cy="115" r="6" fill="#2a2a2a" stroke="#a1a1aa" stroke-width="1"/>
+  <!-- Cable -->
+  <path d="M100,152 C100,162 92,168 92,175" fill="none" stroke="#a1a1aa" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Connector -->
+  <rect x="87" y="175" width="10" height="12" rx="2" fill="#f4f4f5"/>
+  <rect x="89" y="187" width="6" height="3" rx="1" fill="#a1a1aa"/>
+</svg>

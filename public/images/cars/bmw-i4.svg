@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- Body - low-slung sporty sedan -->
+  <path d="M15,55 L15,42 L25,38 L55,32 L70,26 L120,24 Q145,25 155,30 L170,38 L180,45 L185,55 Z" fill="white"/>
+  <!-- Undercarriage -->
+  <rect x="22" y="55" width="155" height="4" rx="2" fill="white"/>
+  <!-- Windows - flowing roofline -->
+  <path d="M58,35 L72,27 L95,26 L95,35 Z" fill="#111"/>
+  <path d="M98,26 L125,26 Q140,27 150,32 L150,35 L98,35 Z" fill="#111"/>
+  <!-- Hood line detail -->
+  <line x1="20" y1="42" x2="55" y2="34" stroke="#999" stroke-width="0.5"/>
+  <!-- Front wheel -->
+  <circle cx="48" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="48" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+  <!-- Rear wheel -->
+  <circle cx="155" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="155" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Wall mount -->
+  <rect x="68" y="30" width="64" height="5" rx="2" fill="#a1a1aa"/>
+  <!-- Main body - compact square -->
+  <rect x="58" y="35" width="84" height="84" rx="8" fill="#a1a1aa"/>
+  <rect x="63" y="40" width="74" height="74" rx="6" fill="#2a2a2a"/>
+  <!-- Brand accent line top -->
+  <rect x="63" y="40" width="74" height="4" rx="2" fill="#22c55e"/>
+  <!-- Status indicator -->
+  <circle cx="100" cy="62" r="5" fill="#22c55e" opacity="0.8"/>
+  <!-- Power level dots -->
+  <circle cx="82" cy="82" r="3" fill="#a1a1aa"/>
+  <circle cx="94" cy="82" r="3" fill="#a1a1aa"/>
+  <circle cx="106" cy="82" r="3" fill="#22c55e"/>
+  <circle cx="118" cy="82" r="3" fill="#a1a1aa" opacity="0.3"/>
+  <!-- Button -->
+  <circle cx="100" cy="100" r="6" fill="#1a1a1a" stroke="#a1a1aa" stroke-width="1"/>
+  <!-- Cable -->
+  <path d="M100,119 C100,132 115,140 115,155" fill="none" stroke="#a1a1aa" stroke-width="3" stroke-linecap="round"/>
+  <!-- Connector -->
+  <rect x="110" y="155" width="11" height="16" rx="3" fill="#f4f4f5"/>
+  <rect x="113" y="162" width="5" height="4" rx="1" fill="#a1a1aa"/>
+</svg>

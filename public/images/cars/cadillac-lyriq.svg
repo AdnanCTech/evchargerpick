@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- Body - bold angular luxury SUV -->
+  <path d="M15,55 L15,38 L22,32 L45,24 L65,20 L140,20 L160,24 L172,32 L178,40 L182,55 Z" fill="white"/>
+  <!-- Undercarriage -->
+  <rect x="22" y="55" width="155" height="5" rx="2" fill="white"/>
+  <!-- Windows - angular styling -->
+  <path d="M35,34 L48,25 L88,23 L88,34 Z" fill="#111"/>
+  <path d="M91,23 L138,23 L155,28 L158,34 L91,34 Z" fill="#111"/>
+  <!-- Angular accent line -->
+  <line x1="18" y1="45" x2="175" y2="45" stroke="#999" stroke-width="0.5"/>
+  <!-- Front wheel -->
+  <circle cx="52" cy="60" r="13" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="52" cy="60" r="5.5" fill="#333" stroke="white" stroke-width="1"/>
+  <!-- Rear wheel -->
+  <circle cx="150" cy="60" r="13" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="150" cy="60" r="5.5" fill="#333" stroke="white" stroke-width="1"/>
+</svg>

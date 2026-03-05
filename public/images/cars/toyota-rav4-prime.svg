@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Traditional boxy SUV, higher ride, traditional roofline -->
+  <path d="M20,50 L28,50 L34,36 L50,22 L65,20 L135,20 L140,20 L155,30 L168,40 L178,42 L180,50 L20,50 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M16,50 L184,50 L184,58 Q184,60 182,60 L18,60 Q16,60 16,58 Z" fill="white"/>
+  <!-- Window - boxy shape -->
+  <path d="M62,24 L133,24 L133,24 L150,34 L160,40 L60,40 L54,34 Z" fill="#111111" opacity="0.3"/>
+  <!-- Window divider -->
+  <line x1="110" y1="24" x2="110" y2="40" stroke="white" stroke-width="1"/>
+  <!-- Front detail -->
+  <path d="M20,50 L16,46 L22,42 L32,40 L32,50 Z" fill="white"/>
+  <!-- Roof rails hint -->
+  <path d="M60,20 L140,20" fill="none" stroke="white" stroke-width="1.5" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M38,60 Q38,47 51,47 Q64,47 64,60" fill="#111111"/>
+  <path d="M140,60 Q140,47 153,47 Q166,47 166,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="51" cy="60" r="9.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="51" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="153" cy="60" r="9.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="153" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

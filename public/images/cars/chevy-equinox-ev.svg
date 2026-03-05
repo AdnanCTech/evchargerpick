@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Compact SUV crossover, higher ride, gently sloping roofline, rounded -->
+  <path d="M20,52 L25,52 L30,38 Q45,24 70,22 L120,22 Q145,22 155,30 L170,42 L180,44 L180,52 L175,52 Q175,52 175,52 L175,52 L20,52 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,52 L182,52 L182,58 Q182,60 180,60 L20,60 Q18,60 18,58 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M68,26 L118,26 Q138,26 148,33 L162,43 L65,43 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M20,52 L18,48 L22,44 L30,42 L30,52 Z" fill="white"/>
+  <!-- Wheel well cutouts -->
+  <path d="M40,60 Q40,48 52,48 Q64,48 64,60" fill="#111111"/>
+  <path d="M140,60 Q140,48 152,48 Q164,48 164,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="152" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="152" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

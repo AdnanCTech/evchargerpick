@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400">
+  <!-- Sky/background -->
+  <rect width="500" height="400" fill="#1a1a1a"/>
+  <!-- Ground -->
+  <rect y="300" width="500" height="100" fill="#2a2a2a"/>
+  <!-- House outline -->
+  <polygon points="280,100 400,170 280,170" fill="#2a2a2a" stroke="#a1a1aa" stroke-width="1.5"/>
+  <rect x="280" y="170" width="120" height="130" fill="#2a2a2a" stroke="#a1a1aa" stroke-width="1.5"/>
+  <rect x="310" y="210" width="30" height="40" fill="#1a1a1a" stroke="#a1a1aa" stroke-width="1"/>
+  <rect x="355" y="220" width="20" height="20" fill="#1a1a1a" stroke="#a1a1aa" stroke-width="1"/>
+  <!-- Garage door area -->
+  <rect x="160" y="210" width="120" height="90" fill="#2a2a2a" stroke="#a1a1aa" stroke-width="1.5"/>
+  <line x1="160" y1="240" x2="280" y2="240" stroke="#a1a1aa" stroke-width="0.5"/>
+  <line x1="160" y1="270" x2="280" y2="270" stroke="#a1a1aa" stroke-width="0.5"/>
+  <!-- Wall-mounted charger box -->
+  <rect x="145" y="220" width="28" height="45" rx="3" fill="#a1a1aa"/>
+  <rect x="148" y="225" width="22" height="20" rx="2" fill="#1a1a1a"/>
+  <circle cx="159" cy="232" r="3" fill="#22c55e"/>
+  <rect x="153" y="250" width="12" height="4" rx="1" fill="#1a1a1a"/>
+  <!-- Charging cable -->
+  <path d="M159,265 C159,280 140,285 130,290 Q110,298 105,280 Q100,265 112,258" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round"/>
+  <!-- Car body -->
+  <g transform="translate(60,250)">
+    <!-- Main body -->
+    <rect x="0" y="20" width="160" height="40" rx="8" fill="#2a2a2a"/>
+    <!-- Roof/cabin -->
+    <path d="M35,20 L55,0 L120,0 L140,20 Z" fill="#2a2a2a"/>
+    <!-- Windows -->
+    <path d="M58,4 L42,18 L85,18 Z" fill="#a1a1aa" opacity="0.4"/>
+    <path d="M90,4 L90,18 L132,18 L118,4 Z" fill="#a1a1aa" opacity="0.4"/>
+    <!-- Wheels -->
+    <circle cx="40" cy="60" r="14" fill="#1a1a1a"/>
+    <circle cx="40" cy="60" r="8" fill="#a1a1aa"/>
+    <circle cx="130" cy="60" r="14" fill="#1a1a1a"/>
+    <circle cx="130" cy="60" r="8" fill="#a1a1aa"/>
+    <!-- Headlight -->
+    <rect x="152" y="28" width="8" height="6" rx="2" fill="#f4f4f5"/>
+    <!-- Tail light -->
+    <rect x="0" y="28" width="6" height="6" rx="2" fill="#a1a1aa"/>
+    <!-- Charge port glow -->
+    <circle cx="52" cy="8" r="2" fill="#22c55e"/>
+  </g>
+  <!-- Driveway lines -->
+  <line x1="60" y1="320" x2="40" y2="400" stroke="#a1a1aa" stroke-width="0.5" opacity="0.3"/>
+  <line x1="220" y1="320" x2="260" y2="400" stroke="#a1a1aa" stroke-width="0.5" opacity="0.3"/>
+  <!-- Ambient green glow on ground near charger -->
+  <ellipse cx="150" cy="302" rx="30" ry="4" fill="#22c55e" opacity="0.15"/>
+</svg>

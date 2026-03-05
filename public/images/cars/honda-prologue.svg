@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- Body - smooth aerodynamic SUV -->
+  <path d="M18,55 L18,40 Q25,30 45,25 Q60,22 80,22 L130,22 Q155,22 168,30 Q175,35 178,45 L180,55 Z" fill="white"/>
+  <!-- Undercarriage -->
+  <rect x="25" y="55" width="150" height="4" rx="2" fill="white"/>
+  <!-- Windows - smooth curves -->
+  <path d="M40,36 Q48,27 65,25 L88,25 L88,36 Z" fill="#111"/>
+  <path d="M91,25 L130,25 Q148,26 155,33 L155,36 L91,36 Z" fill="#111"/>
+  <!-- Front wheel -->
+  <circle cx="52" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="52" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+  <!-- Rear wheel -->
+  <circle cx="148" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="148" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+</svg>

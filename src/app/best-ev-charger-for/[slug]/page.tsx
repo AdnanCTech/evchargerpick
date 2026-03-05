@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
+import { Check, X, Plus, Minus, ArrowUpRight, ArrowRight } from "lucide-react";
 import {
   carModels,
   getCarBySlug,
@@ -8,6 +10,32 @@ import {
   calculateChargeTime,
 } from "@/data/car-models";
 import { type Charger } from "@/data/chargers";
+
+const carSvgMap: Record<string, string> = {
+  "chevy-equinox-ev": "/images/cars/chevy-equinox-ev.svg",
+  "hyundai-ioniq-5": "/images/cars/hyundai-ioniq-5.svg",
+  "toyota-rav4-prime": "/images/cars/toyota-rav4-prime.svg",
+  "rivian-r1t": "/images/cars/rivian-r1t.svg",
+  "vw-id4": "/images/cars/vw-id4.svg",
+  "kia-ev9": "/images/cars/kia-ev9.svg",
+  "jeep-wrangler-4xe": "/images/cars/jeep-wrangler-4xe.svg",
+  "honda-prologue": "/images/cars/honda-prologue.svg",
+  "bmw-i4": "/images/cars/bmw-i4.svg",
+  "cadillac-lyriq": "/images/cars/cadillac-lyriq.svg",
+};
+
+const chargerSvgMap: Record<string, string> = {
+  "lectron-v-box-48a": "/images/chargers/lectron-v-box.svg",
+  "autel-maxicharger-50a": "/images/chargers/autel-maxicharger.svg",
+  "chargepoint-home-flex": "/images/chargers/chargepoint-flex.svg",
+  "emporia-smart-evse-48a": "/images/chargers/emporia-classic.svg",
+  "grizzl-e-classic-40a": "/images/chargers/grizzl-e-classic.svg",
+};
+
+function getStoreLabel(url: string): string {
+  if (url.includes("awin1.com") || url.includes("lectron")) return "Check Price at Lectron";
+  return "Check Price on Amazon";
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -36,17 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="text-emerald-400 text-sm" aria-label={`${rating} out of 5 stars`}>
-      {"★".repeat(Math.floor(rating))}
-      {rating % 1 >= 0.5 ? "½" : ""}
-      <span className="text-zinc-500 ml-1 text-xs">{rating}/5</span>
-    </span>
-  );
-}
-
-function ChargerCard({
+function ChargerReview({
   charger,
   rank,
   car,
@@ -64,106 +82,95 @@ function ChargerCard({
   );
 
   return (
-    <div
-      id={charger.slug}
-      className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 scroll-mt-24"
-    >
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-        <div className="flex-1">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-bold">
-              {rank}
-            </span>
+    <div id={charger.slug} className="scroll-mt-24">
+      <div className="flex flex-col sm:flex-row gap-6">
+        <div className="sm:w-36 shrink-0 flex items-start justify-center pt-1">
+          <Image
+            src={chargerSvgMap[charger.slug] || "/images/chargers/lectron-v-box.svg"}
+            alt={charger.name}
+            width={100}
+            height={100}
+            className="object-contain"
+          />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-4">
             <div>
-              <h3 className="text-lg font-semibold text-zinc-100">
-                {charger.name}
+              {rank === 1 && (
+                <span className="inline-block text-xs font-semibold text-green-500 mb-1">
+                  Our Pick
+                </span>
+              )}
+              <h3 className="text-lg font-bold text-zinc-100">
+                #{rank}. {charger.name}
               </h3>
-              <StarRating rating={charger.rating} />
+            </div>
+            <div className="text-right shrink-0">
+              <div className="text-xl font-bold text-zinc-100">${charger.price}</div>
+              <div className="text-xs text-zinc-500">{charger.rating}/5.0</div>
             </div>
           </div>
+
           <div className="mt-3 flex flex-wrap gap-2">
-            {charger.features.map((f) => (
-              <span
-                key={f}
-                className="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded"
-              >
-                {f}
-              </span>
-            ))}
+            <span className="text-xs text-zinc-400 bg-[#1a1a1a] border border-[#2a2a2a] px-2 py-1 rounded">{charger.amperage}A</span>
+            <span className="text-xs text-zinc-400 bg-[#1a1a1a] border border-[#2a2a2a] px-2 py-1 rounded">{charger.maxKw}kW</span>
+            <span className="text-xs text-zinc-400 bg-[#1a1a1a] border border-[#2a2a2a] px-2 py-1 rounded">{charger.cordLength}ft cord</span>
+            <span className="text-xs text-zinc-400 bg-[#1a1a1a] border border-[#2a2a2a] px-2 py-1 rounded">~{chargeTime}h charge</span>
           </div>
-        </div>
-        <div className="sm:text-right shrink-0">
-          <div className="text-2xl font-bold text-emerald-400">
-            ${charger.price}
+
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <h4 className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Pros</h4>
+              <ul className="space-y-1.5">
+                {charger.pros.map((p) => (
+                  <li key={p} className="text-sm text-zinc-400 flex items-start gap-2">
+                    <Check className="w-4 h-4 text-green-500 shrink-0 mt-0.5" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Cons</h4>
+              <ul className="space-y-1.5">
+                {charger.cons.map((c) => (
+                  <li key={c} className="text-sm text-zinc-400 flex items-start gap-2">
+                    <X className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="text-xs text-zinc-500 mt-1">
-            {charger.amperage}A &middot; {charger.maxKw}kW
-          </div>
+
+          <a
+            href={charger.affiliateUrl}
+            className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-green-500 hover:brightness-110 transition-all"
+            rel="nofollow noopener"
+          >
+            {getStoreLabel(charger.affiliateUrl)}
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </a>
         </div>
       </div>
-
-      {/* Specs */}
-      <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div className="bg-zinc-800/50 rounded-lg p-3 text-center">
-          <div className="text-xs text-zinc-500">Amperage</div>
-          <div className="text-sm font-semibold text-zinc-200">
-            {charger.amperage}A
-          </div>
-        </div>
-        <div className="bg-zinc-800/50 rounded-lg p-3 text-center">
-          <div className="text-xs text-zinc-500">Max Power</div>
-          <div className="text-sm font-semibold text-zinc-200">
-            {charger.maxKw}kW
-          </div>
-        </div>
-        <div className="bg-zinc-800/50 rounded-lg p-3 text-center">
-          <div className="text-xs text-zinc-500">Cord Length</div>
-          <div className="text-sm font-semibold text-zinc-200">
-            {charger.cordLength}ft
-          </div>
-        </div>
-        <div className="bg-zinc-800/50 rounded-lg p-3 text-center">
-          <div className="text-xs text-zinc-500">Charge Time*</div>
-          <div className="text-sm font-semibold text-emerald-400">
-            ~{chargeTime}h
-          </div>
-        </div>
-      </div>
-
-      {/* Pros/Cons */}
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-          <h4 className="text-sm font-medium text-zinc-300 mb-2">Pros</h4>
-          <ul className="space-y-1">
-            {charger.pros.map((p) => (
-              <li key={p} className="text-sm text-zinc-400 flex items-start gap-2">
-                <span className="text-emerald-400 shrink-0 mt-0.5">+</span>
-                {p}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-sm font-medium text-zinc-300 mb-2">Cons</h4>
-          <ul className="space-y-1">
-            {charger.cons.map((c) => (
-              <li key={c} className="text-sm text-zinc-400 flex items-start gap-2">
-                <span className="text-red-400 shrink-0 mt-0.5">-</span>
-                {c}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      <a
-        href={charger.affiliateUrl}
-        className="mt-5 block text-center rounded-lg bg-emerald-500 px-4 py-3 text-sm font-semibold text-zinc-950 hover:bg-emerald-400 transition-colors"
-        rel="nofollow noopener"
-      >
-        Check Price on {charger.name.split(" ")[0]}
-      </a>
     </div>
+  );
+}
+
+function FAQItem({ question, answer }: { question: string; answer: string }) {
+  return (
+    <details className="group border-b border-[#2a2a2a]">
+      <summary className="cursor-pointer py-5 text-zinc-200 font-medium text-sm flex items-center justify-between">
+        {question}
+        <span className="text-zinc-500 ml-4 shrink-0">
+          <Plus className="w-4 h-4 group-open:hidden" />
+          <Minus className="w-4 h-4 hidden group-open:block" />
+        </span>
+      </summary>
+      <div className="pb-5 text-sm text-zinc-400 leading-relaxed">
+        {answer}
+      </div>
+    </details>
   );
 }
 
@@ -252,6 +259,13 @@ export default async function CarModelPage({ params }: Props) {
     ],
   };
 
+  const chargingTimes = [16, 20, 24, 32, 40, 48].map((amps) => {
+    const kw = (amps * 240) / 1000;
+    const effectiveKw = Math.min(car.onboardChargerKw, kw);
+    const hours = (car.batteryKwh * 0.9) / effectiveKw;
+    return { amps, kw, effectiveKw, hours: Math.round(hours * 10) / 10 };
+  });
+
   return (
     <>
       <script
@@ -262,77 +276,76 @@ export default async function CarModelPage({ params }: Props) {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumb */}
         <nav className="text-sm text-zinc-500 mb-8">
-          <Link href="/" className="hover:text-zinc-300">
+          <Link href="/" className="hover:text-zinc-300 transition-colors">
             Home
           </Link>
           <span className="mx-2">/</span>
-          <span className="text-zinc-300">Best EV Charger for {car.name}</span>
+          <Link href="/#browse" className="hover:text-zinc-300 transition-colors">
+            Best EV Charger for
+          </Link>
+          <span className="mx-2">/</span>
+          <span className="text-zinc-300">{car.name}</span>
         </nav>
 
-        {/* Quick Recommendation */}
-        <header>
-          <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50">
-            Best EV Chargers for the {car.name}
-          </h1>
-          <p className="mt-3 text-zinc-400">
-            Updated {car.year} &middot; {car.batteryKwh}kWh battery &middot;{" "}
-            {car.onboardChargerKw}kW onboard charger &middot; {car.type}
-          </p>
+        {/* Hero */}
+        <header className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-bold text-zinc-100">
+              Best Home Chargers for the {car.name}
+            </h1>
+            <p className="mt-2 text-sm text-zinc-500">Updated March 2026</p>
+            <p className="mt-2 text-sm text-zinc-400">
+              {car.batteryKwh}kWh battery &middot; {car.onboardChargerKw}kW onboard charger &middot; {car.type === "PHEV" ? "Plug-in Hybrid" : car.type}
+            </p>
+          </div>
+          <div className="sm:w-40 shrink-0 flex justify-center">
+            <Image
+              src={carSvgMap[car.slug] || "/images/cars/chevy-equinox-ev.svg"}
+              alt={car.name}
+              width={160}
+              height={64}
+              className="object-contain opacity-80"
+            />
+          </div>
         </header>
 
         {/* Quick Pick */}
-        <div className="mt-8 rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-6">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-emerald-400 text-lg">&#9889;</span>
-            <h2 className="text-lg font-semibold text-emerald-400">
-              Quick Pick
-            </h2>
-          </div>
-          <p className="text-zinc-300">
-            <strong className="text-zinc-100">{topCharger.name}</strong> ($
-            {topCharger.price}) is our #1 recommendation for the {car.name}. It
-            delivers {topCharger.maxKw}kW and charges from 10-100% in about{" "}
-            {topChargeTime} hours.
+        <div className="mt-8 rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] p-6 relative overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500" />
+          <h2 className="text-sm font-semibold text-green-500 mb-2">
+            Our #1 Pick: {topCharger.name}
+          </h2>
+          <p className="text-sm text-zinc-400 leading-relaxed">
+            At ${topCharger.price}, the {topCharger.name} delivers {topCharger.maxKw}kW
+            and charges your {car.name} from 10-100% in about {topChargeTime} hours.
+            {" "}{topCharger.pros[0]}.
           </p>
           <a
             href={topCharger.affiliateUrl}
-            className="inline-block mt-4 rounded-lg bg-emerald-500 px-5 py-2.5 text-sm font-semibold text-zinc-950 hover:bg-emerald-400 transition-colors"
+            className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-green-500 hover:brightness-110 transition-all"
             rel="nofollow noopener"
           >
-            Check Price
+            {getStoreLabel(topCharger.affiliateUrl)}
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
         </div>
 
         {/* Comparison Table */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-zinc-50 mb-6">
+          <h2 className="text-2xl font-bold text-zinc-100 mb-6">
             Charger Comparison for {car.name}
           </h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-zinc-800">
-                  <th className="text-left py-3 px-3 text-zinc-400 font-medium">
-                    Charger
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Price
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Amps
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Power
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Cord
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Charge Time*
-                  </th>
-                  <th className="text-center py-3 px-3 text-zinc-400 font-medium">
-                    Rating
-                  </th>
+                <tr className="border-b border-[#2a2a2a]">
+                  <th className="text-left py-3 px-3 text-zinc-500 font-medium">Charger</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Price</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Amps</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Power</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Cord</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Charge Time*</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Rating</th>
                 </tr>
               </thead>
               <tbody>
@@ -347,75 +360,97 @@ export default async function CarModelPage({ params }: Props) {
                   return (
                     <tr
                       key={charger.slug}
-                      className="border-b border-zinc-800/50 hover:bg-zinc-800/30"
+                      className={i % 2 === 0 ? "bg-[#111111]" : "bg-[#161616]"}
                     >
                       <td className="py-3 px-3">
                         <a
                           href={`#${charger.slug}`}
-                          className="text-zinc-200 hover:text-emerald-400"
+                          className="text-zinc-200 hover:text-zinc-50 transition-colors"
                         >
                           {i === 0 && (
-                            <span className="text-emerald-400 text-xs mr-1">
-                              &#9733;
+                            <span className="text-green-500 text-xs font-medium mr-1.5">
+                              Our Pick
                             </span>
                           )}
                           {charger.name}
                         </a>
                       </td>
-                      <td className="py-3 px-3 text-center font-medium text-emerald-400">
-                        ${charger.price}
-                      </td>
-                      <td className="py-3 px-3 text-center text-zinc-300">
-                        {charger.amperage}A
-                      </td>
-                      <td className="py-3 px-3 text-center text-zinc-300">
-                        {charger.maxKw}kW
-                      </td>
-                      <td className="py-3 px-3 text-center text-zinc-300">
-                        {charger.cordLength}ft
-                      </td>
-                      <td className="py-3 px-3 text-center text-zinc-300">
-                        ~{ct}h
-                      </td>
-                      <td className="py-3 px-3 text-center text-zinc-300">
-                        {charger.rating}
-                      </td>
+                      <td className="py-3 px-3 text-center text-zinc-300">${charger.price}</td>
+                      <td className="py-3 px-3 text-center text-zinc-300">{charger.amperage}A</td>
+                      <td className="py-3 px-3 text-center text-zinc-300">{charger.maxKw}kW</td>
+                      <td className="py-3 px-3 text-center text-zinc-300">{charger.cordLength}ft</td>
+                      <td className="py-3 px-3 text-center text-zinc-300">~{ct}h</td>
+                      <td className="py-3 px-3 text-center text-zinc-300">{charger.rating}/5.0</td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-zinc-600 mt-2">
-            * Charge time estimated from 10% to 100% for the {car.name}&apos;s{" "}
-            {car.batteryKwh}kWh battery. Actual times may vary based on
-            temperature and other factors.
+          <p className="text-xs text-zinc-600 mt-3">
+            * Estimated from 10% to 100% for the {car.name}&apos;s {car.batteryKwh}kWh
+            battery. Actual times may vary.
           </p>
         </section>
 
         {/* Detailed Reviews */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-zinc-50 mb-6">
+          <h2 className="text-2xl font-bold text-zinc-100 mb-8">
             Detailed Reviews
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-8">
             {recommendedChargers.map((charger, i) => (
-              <ChargerCard
-                key={charger.slug}
-                charger={charger}
-                rank={i + 1}
-                car={car}
-              />
+              <div key={charger.slug}>
+                <ChargerReview charger={charger} rank={i + 1} car={car} />
+                {i < recommendedChargers.length - 1 && (
+                  <hr className="mt-8 border-[#2a2a2a]" />
+                )}
+              </div>
             ))}
           </div>
         </section>
 
+        {/* Charging Times Table */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-zinc-100 mb-4">
+            Charging Times for Your {car.name}
+          </h2>
+          <p className="text-sm text-zinc-500 mb-6">
+            Estimated time to charge from 10% to 100% at different amperage levels.
+            {car.onboardChargerKw < 12 && (
+              <> Your {car.name}&apos;s onboard charger limits intake to {car.onboardChargerKw}kW.</>
+            )}
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-[#2a2a2a]">
+                  <th className="text-left py-3 px-3 text-zinc-500 font-medium">Amps</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Charger kW</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Effective kW</th>
+                  <th className="text-center py-3 px-3 text-zinc-500 font-medium">Charge Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                {chargingTimes.map((row, i) => (
+                  <tr key={row.amps} className={i % 2 === 0 ? "bg-[#111111]" : "bg-[#161616]"}>
+                    <td className="py-3 px-3 text-zinc-300">{row.amps}A</td>
+                    <td className="py-3 px-3 text-center text-zinc-300">{row.kw.toFixed(1)}kW</td>
+                    <td className="py-3 px-3 text-center text-zinc-300">{row.effectiveKw.toFixed(1)}kW</td>
+                    <td className="py-3 px-3 text-center text-zinc-300">~{row.hours}h</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Charging Info */}
-        <section className="mt-12 rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
-          <h2 className="text-xl font-bold text-zinc-50 mb-4">
+        <section className="mt-12 rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] p-6">
+          <h2 className="text-xl font-bold text-zinc-100 mb-4">
             Understanding {car.name} Charging
           </h2>
-          <div className="space-y-3 text-sm text-zinc-400">
+          <div className="space-y-3 text-sm text-zinc-400 leading-relaxed">
             <p>
               The {car.name} has a <strong className="text-zinc-200">{car.batteryKwh}kWh</strong> battery
               with a <strong className="text-zinc-200">{car.onboardChargerKw}kW</strong> onboard charger.
@@ -437,39 +472,27 @@ export default async function CarModelPage({ params }: Props) {
           </div>
           <Link
             href="/calculator"
-            className="inline-block mt-4 text-sm text-emerald-400 hover:text-emerald-300"
+            className="inline-flex items-center gap-1.5 mt-4 text-sm text-green-500 hover:brightness-110 transition-all"
           >
-            Use our calculator for custom charge estimates &rarr;
+            Use our calculator for custom charge estimates
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </section>
 
         {/* FAQ */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-zinc-50 mb-6">
+          <h2 className="text-2xl font-bold text-zinc-100 mb-6">
             Frequently Asked Questions
           </h2>
-          <div className="space-y-4">
+          <div>
             {faqItems.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-xl border border-zinc-800 bg-zinc-900/50"
-              >
-                <summary className="cursor-pointer p-5 text-zinc-200 font-medium text-sm flex items-center justify-between">
-                  {faq.question}
-                  <span className="text-zinc-500 group-open:rotate-180 transition-transform ml-2">
-                    &#9662;
-                  </span>
-                </summary>
-                <div className="px-5 pb-5 text-sm text-zinc-400">
-                  {faq.answer}
-                </div>
-              </details>
+              <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </section>
 
         {/* Affiliate Disclosure */}
-        <div className="mt-12 text-xs text-zinc-600 border-t border-zinc-800 pt-6">
+        <div className="mt-12 text-xs text-zinc-600 border-t border-[#2a2a2a] pt-6">
           <strong className="text-zinc-500">Affiliate Disclosure:</strong>{" "}
           Links on this page may be affiliate links. EVChargerPick earns a
           commission from qualifying purchases at no extra cost to you. This

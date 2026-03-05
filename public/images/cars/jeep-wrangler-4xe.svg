@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
+  <!-- Body - boxy shape -->
+  <path d="M22,55 L22,28 L25,25 L60,25 L60,20 L150,20 L150,25 L160,25 L165,28 L165,55 Z" fill="white"/>
+  <!-- Flat windshield -->
+  <path d="M28,28 L58,28 L58,22 L42,22 Z" fill="#111"/>
+  <!-- Side windows -->
+  <path d="M62,23 L100,23 L100,35 L62,35 Z" fill="#111"/>
+  <path d="M103,23 L140,23 L140,35 L103,35 Z" fill="#111"/>
+  <!-- Spare tire on back -->
+  <circle cx="170" cy="40" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="170" cy="40" r="5" fill="#333" stroke="white" stroke-width="1"/>
+  <!-- Front wheel -->
+  <circle cx="50" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="50" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+  <!-- Rear wheel -->
+  <circle cx="140" cy="60" r="12" fill="#111" stroke="white" stroke-width="2"/>
+  <circle cx="140" cy="60" r="5" fill="#333" stroke="white" stroke-width="1"/>
+</svg>

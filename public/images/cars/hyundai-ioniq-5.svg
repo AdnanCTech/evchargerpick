@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Angular/pixel design, flat roofline, sharp angles, hatchback rear -->
+  <path d="M22,52 L28,52 L35,38 L55,24 L68,22 L140,22 L140,28 L165,40 L178,44 L180,52 L22,52 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,52 L182,52 L182,58 Q182,60 180,60 L20,60 Q18,60 18,58 Z" fill="white"/>
+  <!-- Window - angular shape -->
+  <path d="M60,26 L138,26 L138,30 L158,42 L58,42 L52,36 Z" fill="#111111" opacity="0.3"/>
+  <!-- Angular front detail -->
+  <path d="M22,52 L20,48 L26,42 L35,40 L35,52 Z" fill="white"/>
+  <!-- Pixel-style character line -->
+  <path d="M35,44 L170,44" fill="none" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <!-- Wheel well cutouts -->
+  <path d="M42,60 Q42,48 54,48 Q66,48 66,60" fill="#111111"/>
+  <path d="M138,60 Q138,48 150,48 Q162,48 162,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="54" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="54" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="150" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="150" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

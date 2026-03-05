@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Rounded crossover, smooth aerodynamic curves, shorter hood, rounded roofline -->
+  <path d="M22,52 L28,52 Q30,42 40,38 Q50,30 65,26 Q75,24 90,23 Q120,23 140,26 Q155,30 162,38 Q170,42 175,44 L180,48 L180,52 L22,52 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,52 L182,52 L182,58 Q182,60 180,60 L20,60 Q18,60 18,58 Z" fill="white"/>
+  <!-- Window - rounded -->
+  <path d="M72,28 Q85,26 100,26 Q125,26 140,30 L155,38 L158,42 L65,42 Q65,38 68,34 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M22,52 L20,48 L24,44 L32,42 L32,52 Z" fill="white"/>
+  <!-- Smooth character line -->
+  <path d="M32,46 Q100,43 172,46" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M42,60 Q42,48 54,48 Q66,48 66,60" fill="#111111"/>
+  <path d="M140,60 Q140,48 152,48 Q164,48 164,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="54" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="54" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="152" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="152" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>
