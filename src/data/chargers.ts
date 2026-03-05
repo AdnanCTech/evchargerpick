@@ -40,7 +40,7 @@ export const chargers: Charger[] = [
       "No hardwire option without adapter",
       "Newer brand with less track record",
     ],
-    affiliateUrl: "https://evchargerpick.com/go/lectron-v-box-48a",
+    affiliateUrl: "https://www.awin1.com/cread.php?awinmid=91891&awinaffid=2800074&ued=https%3A%2F%2Fev-lectron.com%2Fproducts%2Flectron-240v-48a-electric-vehicle-ev-charging-station",
     rating: 4.5,
   },
   {
@@ -70,7 +70,7 @@ export const chargers: Charger[] = [
       "Requires 60A circuit for full output",
       "Larger unit size",
     ],
-    affiliateUrl: "https://evchargerpick.com/go/autel-maxicharger-50a",
+    affiliateUrl: "https://www.amazon.com/dp/B0B712M5VY?tag=evchargerpick-20",
     rating: 4.7,
   },
   {
@@ -100,7 +100,7 @@ export const chargers: Charger[] = [
       "23-foot cord (shorter than some)",
       "Premium price for brand name",
     ],
-    affiliateUrl: "https://evchargerpick.com/go/chargepoint-home-flex",
+    affiliateUrl: "https://www.amazon.com/dp/B07WXZDHGV?tag=evchargerpick-20",
     rating: 4.6,
   },
   {
@@ -130,7 +130,7 @@ export const chargers: Charger[] = [
       "No hardwire option",
       "Less known brand",
     ],
-    affiliateUrl: "https://evchargerpick.com/go/emporia-smart-evse-48a",
+    affiliateUrl: "https://www.amazon.com/dp/B0CKKPTDPK?tag=evchargerpick-20",
     rating: 4.4,
   },
   {
@@ -160,7 +160,7 @@ export const chargers: Charger[] = [
       "40A max (slower than 48A options)",
       "No energy monitoring",
     ],
-    affiliateUrl: "https://evchargerpick.com/go/grizzl-e-classic-40a",
+    affiliateUrl: "https://www.amazon.com/dp/B08Q22651D?tag=evchargerpick-20",
     rating: 4.5,
   },
 ];

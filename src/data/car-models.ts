@@ -19,7 +19,7 @@ export const carModels: CarModel[] = [
     name: "Chevy Equinox EV",
     slug: "chevy-equinox-ev",
     brand: "Chevrolet",
-    batteryKwh: 60,
+    batteryKwh: 85,
     onboardChargerKw: 11.5,
     maxAmps: 48,
     type: "BEV",
