@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { Search, Zap } from "lucide-react";
+import { Search } from "lucide-react";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#111111]/80 backdrop-blur-md border-b border-[#2a2a2a]">
-      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
-        <Link href="/" className="flex items-center gap-2">
+      <nav className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <Link href="/" className="flex items-center gap-2.5">
           <span className="w-2 h-2 rounded-full bg-green-500" aria-hidden="true" />
           <span className="font-bold text-lg text-zinc-100 tracking-tight">
             EVChargerPick
           </span>
         </Link>
-        <div className="flex items-center gap-6 text-sm">
+        <div className="flex items-center gap-7 text-sm">
           <Link
             href="/"
             className="text-zinc-400 hover:text-zinc-100 transition-colors"
@@ -72,11 +72,11 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="border-t border-[#2a2a2a] mt-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="border-t border-[#2a2a2a] mt-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-3">
+            <div className="flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-green-500" aria-hidden="true" />
               <span className="font-bold text-zinc-100">EVChargerPick</span>
             </div>
@@ -85,10 +85,10 @@ function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-zinc-300 mb-3 text-sm">
+            <h3 className="font-semibold text-zinc-300 mb-4 text-sm">
               Quick Links
             </h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
                   href="/"
@@ -116,8 +116,8 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-zinc-300 mb-3 text-sm">Legal</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="font-semibold text-zinc-300 mb-4 text-sm">Legal</h3>
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
                   href="/privacy"
@@ -129,17 +129,14 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-[#2a2a2a] mt-8 pt-8">
-          <p className="text-xs text-zinc-600 leading-relaxed">
-            <strong className="text-zinc-500">Affiliate Disclosure:</strong>{" "}
+        <div className="border-t border-[#2a2a2a] mt-10 pt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="text-[11px] text-zinc-600 leading-relaxed max-w-2xl">
             EVChargerPick earns commissions from qualifying purchases through
-            affiliate links on this site. This does not affect our reviews or
-            recommendations — we only recommend products we genuinely believe
-            are the best options for EV owners. Prices shown may vary.
+            affiliate links. This does not affect our reviews or
+            recommendations.
           </p>
-          <p className="text-xs text-zinc-600 mt-4">
-            &copy; {new Date().getFullYear()} EVChargerPick. All rights
-            reserved.
+          <p className="text-[11px] text-zinc-600 shrink-0">
+            &copy; {new Date().getFullYear()} EVChargerPick
           </p>
         </div>
       </div>

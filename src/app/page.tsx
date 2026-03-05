@@ -39,20 +39,20 @@ export default function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#111111] to-[#0a0a0a]" />
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-20 pb-20 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-32 pb-28 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
-              <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-100 leading-[1.1]">
+              <h1 className="text-5xl sm:text-[56px] font-bold tracking-tight text-zinc-100 leading-[1.1]">
                 Find the Right Charger for Your Car
               </h1>
-              <p className="mt-5 text-lg text-zinc-400 leading-relaxed max-w-lg">
+              <p className="mt-6 text-lg text-zinc-400 leading-[1.7] max-w-lg">
                 We match your car&apos;s specs to the best home charger. No
                 guesswork, no overspending.
               </p>
-              <div className="mt-8">
+              <div className="mt-10">
                 <Link
                   href="#browse"
-                  className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-sm font-semibold text-[#111111] hover:brightness-110 transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-green-500 px-8 py-3 font-medium text-white hover:bg-green-400 transition"
                 >
                   Browse by Car
                   <ArrowRight className="w-4 h-4" />
@@ -66,6 +66,7 @@ export default function Home() {
                 width={460}
                 height={368}
                 priority
+                className="rounded-xl"
               />
             </div>
           </div>
@@ -74,12 +75,12 @@ export default function Home() {
 
       {/* Browse by Car */}
       <section id="browse" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="mb-10">
-            <span className="text-xs font-semibold uppercase tracking-widest text-green-500">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="mb-12">
+            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-500">
               Select Your Model
             </span>
-            <h2 className="text-3xl font-bold text-zinc-100 mt-2">
+            <h2 className="text-4xl font-semibold text-zinc-100 mt-3 tracking-tight">
               Browse by Car
             </h2>
           </div>
@@ -88,15 +89,15 @@ export default function Home() {
               <Link
                 key={car.slug}
                 href={`/best-ev-charger-for/${car.slug}`}
-                className="group flex flex-col items-center gap-3 rounded-lg border border-[#2a2a2a] bg-[#1a1a1a] p-5 hover:-translate-y-0.5 transition-all duration-200"
+                className="group flex flex-col items-center gap-3 rounded-2xl border border-zinc-800 bg-[#1a1a1a] p-5 hover:-translate-y-0.5 transition-all duration-200"
               >
-                <div className="w-full h-12 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
+                <div className="w-full h-14 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
                   <Image
                     src={carSvgMap[car.slug] || "/images/cars/chevy-equinox-ev.svg"}
                     alt={car.name}
                     width={100}
                     height={40}
-                    className="object-contain"
+                    className="object-contain rounded-xl"
                   />
                 </div>
                 <div className="text-center">
@@ -107,7 +108,7 @@ export default function Home() {
                     {car.batteryKwh}kWh
                   </div>
                 </div>
-                <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+                <ArrowRight className="w-4 h-4 text-zinc-700 group-hover:text-zinc-400 transition-colors" />
               </Link>
             ))}
           </div>
@@ -115,49 +116,49 @@ export default function Home() {
       </section>
 
       {/* Top Chargers — Editorial Style */}
-      <section className="bg-[#1a1a1a]">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="mb-10">
-            <span className="text-xs font-semibold uppercase tracking-widest text-green-500">
-              Expert Picks
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="mb-12">
+            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-500">
+              Top Rated
             </span>
-            <h2 className="text-3xl font-bold text-zinc-100 mt-2">
+            <h2 className="text-4xl font-semibold text-zinc-100 mt-3 tracking-tight">
               Top-Rated EV Chargers
             </h2>
           </div>
-          <div className="space-y-6">
+          <div className="divide-y divide-[#2a2a2a]">
             {topChargers.map((charger, i) => (
               <div
                 key={charger.slug}
-                className="flex flex-col sm:flex-row gap-6 rounded-lg border border-[#2a2a2a] bg-[#111111] p-6"
+                className="flex flex-col sm:flex-row gap-8 py-8 first:pt-0 last:pb-0"
               >
-                <div className="sm:w-40 shrink-0 flex items-center justify-center">
+                <div className="w-[120px] h-[120px] shrink-0 flex items-center justify-center">
                   <Image
                     src={chargerSvgMap[charger.slug] || "/images/chargers/lectron-v-box.svg"}
                     alt={charger.name}
                     width={120}
                     height={120}
-                    className="object-contain"
+                    className="object-contain rounded-xl"
                   />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       {i === 0 && (
-                        <span className="inline-block text-xs font-semibold text-green-500 mb-1">
+                        <span className="text-[11px] font-medium text-green-500 tracking-[0.1em] uppercase">
                           Our Pick
                         </span>
                       )}
-                      <h3 className="text-lg font-semibold text-zinc-100">
+                      <h3 className="text-xl font-semibold text-zinc-100 mt-0.5">
                         {charger.name}
                       </h3>
-                      <p className="text-sm text-zinc-400 mt-1">
+                      <p className="text-sm text-zinc-400 mt-1.5 leading-[1.7]">
                         {charger.amperage}A &middot; {charger.maxKw}kW &middot;{" "}
                         {charger.cordLength}ft cord
                       </p>
                     </div>
                     <div className="text-right shrink-0">
-                      <div className="text-xl font-bold text-zinc-100">
+                      <div className="text-2xl font-bold text-zinc-100">
                         ${charger.price}
                       </div>
                       <div className="text-xs text-zinc-500 mt-1">
@@ -165,11 +166,11 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {charger.features.slice(0, 3).map((f) => (
                       <span
                         key={f}
-                        className="text-xs bg-[#1a1a1a] text-zinc-400 px-2 py-1 rounded border border-[#2a2a2a]"
+                        className="text-xs bg-zinc-700/30 text-zinc-400 px-3 py-1 rounded-full"
                       >
                         {f}
                       </span>
@@ -177,7 +178,7 @@ export default function Home() {
                   </div>
                   <a
                     href={charger.affiliateUrl}
-                    className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-green-500 hover:brightness-110 transition-all"
+                    className="inline-flex items-center gap-1.5 mt-5 text-sm font-medium text-green-500 hover:text-green-400 transition"
                     rel="nofollow noopener"
                   >
                     {getStoreLabel(charger.name, charger.affiliateUrl)}
@@ -192,12 +193,12 @@ export default function Home() {
 
       {/* Comparisons */}
       <section id="comparisons" className="scroll-mt-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="mb-10">
-            <span className="text-xs font-semibold uppercase tracking-widest text-green-500">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="mb-12">
+            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-500">
               Head to Head
             </span>
-            <h2 className="text-3xl font-bold text-zinc-100 mt-2">
+            <h2 className="text-4xl font-semibold text-zinc-100 mt-3 tracking-tight">
               Comparisons
             </h2>
           </div>
@@ -206,13 +207,13 @@ export default function Home() {
               <Link
                 key={comp.slug}
                 href={`/compare/${comp.slug}`}
-                className="group flex items-start justify-between gap-4 py-4 border-b border-[#2a2a2a] hover:border-zinc-600 transition-colors"
+                className="group flex items-start justify-between gap-4 py-5 border-b border-[#2a2a2a] hover:border-zinc-600 transition-colors"
               >
                 <div>
                   <div className="text-sm font-medium text-zinc-200 group-hover:text-zinc-50 transition-colors">
                     {comp.title}
                   </div>
-                  <p className="text-xs text-zinc-500 mt-1 line-clamp-1">
+                  <p className="text-xs text-zinc-500 mt-1.5 line-clamp-1">
                     {comp.verdict.slice(0, 100)}...
                   </p>
                 </div>
@@ -224,20 +225,23 @@ export default function Home() {
       </section>
 
       {/* Calculator CTA */}
-      <section className="bg-[#1a1a1a]">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <section>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="rounded-2xl border border-zinc-800 bg-[#1a1a1a] p-10 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-8">
             <div>
-              <h2 className="text-xl font-bold text-zinc-100">
+              <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-500">
+                Charging Tool
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-100 mt-3 tracking-tight">
                 Not sure which charger fits your car?
               </h2>
-              <p className="text-sm text-zinc-400 mt-1">
+              <p className="text-base text-zinc-400 mt-3 leading-[1.7]">
                 Calculate charge times and costs for any car + charger combo.
               </p>
             </div>
             <Link
               href="/calculator"
-              className="inline-flex items-center gap-2 rounded-lg border border-zinc-100 px-6 py-3 text-sm font-semibold text-zinc-100 hover:brightness-110 transition-all shrink-0"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-700 px-8 py-3 font-medium text-zinc-300 hover:border-zinc-500 transition shrink-0"
             >
               Try the Calculator
               <ArrowRight className="w-4 h-4" />
