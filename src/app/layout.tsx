@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Search } from "lucide-react";
 import "./globals.css";
+
+const GA_ID = "G-9WB581JQQQ";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -151,6 +154,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
+      </head>
       <body
         className={`${inter.variable} antialiased`}
         style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
