@@ -23,6 +23,8 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   return comparisons.map((c) => ({ slug: c.slug }));
 }

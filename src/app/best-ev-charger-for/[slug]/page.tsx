@@ -61,6 +61,9 @@ interface Props {
   params: Promise<{ slug: string }>;
 }
 
+// Force dynamic rendering to avoid Next.js 16 Turbopack prerender InvariantError
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   return carModels.map((car) => ({ slug: car.slug }));
 }
