@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { Search } from "lucide-react";
+import MobileNav from "./MobileNav";
 import "./globals.css";
 
 const GA_ID = "G-9WB581JQQQ";
@@ -41,7 +42,7 @@ function Header() {
             EVChargerPick
           </span>
         </Link>
-        <div className="flex items-center gap-7 text-sm">
+        <div className="hidden sm:flex items-center gap-7 text-sm">
           <Link
             href="/"
             className="text-zinc-400 hover:text-zinc-100 transition-colors"
@@ -56,7 +57,7 @@ function Header() {
           </Link>
           <Link
             href="/#comparisons"
-            className="text-zinc-400 hover:text-zinc-100 transition-colors hidden sm:block"
+            className="text-zinc-400 hover:text-zinc-100 transition-colors"
           >
             Comparisons
           </Link>
@@ -68,6 +69,7 @@ function Header() {
           </Link>
           <Search className="w-5 h-5 text-zinc-500 hover:text-zinc-300 transition-colors cursor-pointer" />
         </div>
+        <MobileNav />
       </nav>
     </header>
   );
