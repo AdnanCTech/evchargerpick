@@ -67,6 +67,12 @@ function Header() {
           >
             Calculator
           </Link>
+          <Link
+            href="/guides/apartment-ev-charging"
+            className="text-zinc-400 hover:text-zinc-100 transition-colors"
+          >
+            Guides
+          </Link>
           <Search className="w-5 h-5 text-zinc-500 hover:text-zinc-300 transition-colors cursor-pointer" />
         </div>
         <MobileNav />
