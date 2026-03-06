@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Polestar 2: Fastback sedan, sporty low profile, Thor's hammer lights -->
+  <path d="M20,54 L26,54 L32,42 L46,30 L62,24 L138,24 L148,26 L162,36 L174,46 L180,54 L20,54 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,54 L182,54 L182,58 Q182,60 180,60 L20,60 Q18,60 18,58 Z" fill="white"/>
+  <!-- Window - fastback sweep -->
+  <path d="M54,28 L136,28 L145,30 L158,40 L52,40 L48,34 Z" fill="#111111" opacity="0.3"/>
+  <!-- Thor's hammer headlight accent -->
+  <path d="M28,42 L34,38 L34,46" fill="none" stroke="white" stroke-width="0.8" opacity="0.4"/>
+  <!-- Sport character line -->
+  <path d="M34,44 L170,44" fill="none" stroke="white" stroke-width="0.6" opacity="0.35"/>
+  <!-- Rear spoiler hint -->
+  <path d="M148,26 L152,24 L154,26" fill="none" stroke="white" stroke-width="0.6" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M40,60 Q40,48 52,48 Q64,48 64,60" fill="#111111"/>
+  <path d="M142,60 Q142,48 154,48 Q166,48 166,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="154" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="154" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

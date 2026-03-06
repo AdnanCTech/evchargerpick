@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- BMW iX: Large luxury SUV, coupe-like sloping roofline, kidney grille -->
+  <path d="M20,52 L26,52 L30,40 L42,28 L58,22 L140,22 L158,28 L168,38 L178,48 L182,52 L20,52 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,52 L184,52 L184,57 Q184,59 182,59 L20,59 Q18,59 18,57 Z" fill="white"/>
+  <!-- Window - coupe-like sweep -->
+  <path d="M52,26 L138,26 L152,32 L162,40 L50,40 L46,32 Z" fill="#111111" opacity="0.3"/>
+  <!-- BMW kidney grille -->
+  <rect x="26" y="42" width="5" height="6" rx="1.5" fill="#111111" opacity="0.3"/>
+  <rect x="32" y="42" width="5" height="6" rx="1.5" fill="#111111" opacity="0.3"/>
+  <!-- Hofmeister kink detail -->
+  <path d="M152,32 L148,40" fill="none" stroke="white" stroke-width="0.8" opacity="0.4"/>
+  <!-- Character line -->
+  <path d="M35,44 L172,44" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M38,59 Q38,46 52,46 Q66,46 66,59" fill="#111111"/>
+  <path d="M140,59 Q140,46 154,46 Q168,46 168,59" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="59" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="59" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="154" cy="59" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="154" cy="59" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

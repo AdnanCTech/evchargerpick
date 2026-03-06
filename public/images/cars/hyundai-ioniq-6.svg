@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Hyundai Ioniq 6: Sleek streamlined sedan, very low profile, coupe-like roofline -->
+  <path d="M18,54 L25,54 L32,44 L48,30 L65,24 L135,24 L155,30 L168,40 L178,48 L182,54 L18,54 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M16,54 L184,54 L184,58 Q184,60 182,60 L18,60 Q16,60 16,58 Z" fill="white"/>
+  <!-- Window - smooth flowing shape -->
+  <path d="M55,28 L130,28 L148,34 L160,42 L52,42 L46,36 Z" fill="#111111" opacity="0.3"/>
+  <!-- Character line - streamliner accent -->
+  <path d="M30,46 L175,46" fill="none" stroke="white" stroke-width="0.5" opacity="0.4"/>
+  <!-- Flush door handle detail -->
+  <rect x="88" y="40" width="8" height="1.5" rx="0.75" fill="white" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M40,60 Q40,48 52,48 Q64,48 64,60" fill="#111111"/>
+  <path d="M140,60 Q140,48 152,48 Q164,48 164,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="152" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="152" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Mercedes EQS: Luxury sedan, smooth/rounded "one bow" design, cab-forward -->
+  <path d="M18,54 L24,54 L30,44 L44,32 L60,26 L142,26 L156,30 L168,40 L178,50 L182,54 L18,54 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M16,54 L184,54 L184,58 Q184,60 182,60 L18,60 Q16,60 16,58 Z" fill="white"/>
+  <!-- Window - smooth arc "one bow" -->
+  <path d="M52,30 L140,30 L150,34 L162,42 L50,42 L44,36 Z" fill="#111111" opacity="0.3"/>
+  <!-- Smooth flowing roofline -->
+  <path d="M60,26 L142,26" fill="none" stroke="white" stroke-width="0.3" opacity="0.3"/>
+  <!-- Star emblem hint -->
+  <circle cx="28" cy="44" r="2" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <!-- Continuous light bar rear -->
+  <rect x="172" y="44" width="6" height="1.5" rx="0.75" fill="white" opacity="0.4"/>
+  <!-- Body crease -->
+  <path d="M32,46 L176,46" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M38,60 Q38,48 50,48 Q62,48 62,60" fill="#111111"/>
+  <path d="M142,60 Q142,48 154,48 Q166,48 166,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="50" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="50" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="154" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="154" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

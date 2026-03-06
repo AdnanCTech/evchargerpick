@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Audi Q8 e-tron: Large SUV, aggressive stance, Singleframe grille -->
+  <path d="M20,52 L24,52 L28,38 L40,26 L56,20 L148,20 L160,24 L170,34 L180,46 L182,52 L20,52 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M18,52 L184,52 L184,57 Q184,59 182,59 L20,59 Q18,59 18,57 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M50,24 L146,24 L156,30 L164,38 L48,38 L44,30 Z" fill="#111111" opacity="0.3"/>
+  <!-- Singleframe grille detail -->
+  <path d="M24,40 L28,38 L28,48 L24,50 Z" fill="#111111" opacity="0.25"/>
+  <!-- Sharp character line -->
+  <path d="M30,42 L176,42" fill="none" stroke="white" stroke-width="0.6" opacity="0.4"/>
+  <!-- Quattro fender flare -->
+  <path d="M36,52 L38,46 L66,46 L68,52" fill="none" stroke="white" stroke-width="0.5" opacity="0.3"/>
+  <!-- Wheel well cutouts -->
+  <path d="M38,59 Q38,45 52,45 Q66,45 66,59" fill="#111111"/>
+  <path d="M140,59 Q140,45 154,45 Q168,45 168,59" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="59" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="59" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="154" cy="59" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="154" cy="59" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

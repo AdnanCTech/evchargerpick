@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Rivian R1S: Large SUV, boxy front, enclosed rear, high ride height -->
+  <path d="M20,52 L24,52 L28,38 L38,26 L55,20 L150,20 L160,22 L170,30 L178,40 L182,52 L20,52 Z" fill="white"/>
+  <!-- Lower body / sill - raised for ground clearance -->
+  <path d="M18,52 L184,52 L184,56 Q184,58 182,58 L20,58 Q18,58 18,56 Z" fill="white"/>
+  <!-- Window - tall SUV windows -->
+  <path d="M48,24 L148,24 L155,28 L164,36 L46,36 L42,30 Z" fill="#111111" opacity="0.3"/>
+  <!-- B-pillar -->
+  <rect x="95" y="24" width="3" height="14" fill="white" opacity="0.6"/>
+  <!-- Roof rack detail -->
+  <path d="M55,20 L145,20" fill="none" stroke="white" stroke-width="1" opacity="0.3"/>
+  <!-- LED light bar front -->
+  <rect x="24" y="36" width="8" height="2" rx="1" fill="white" opacity="0.4"/>
+  <!-- Wheel well cutouts - larger for off-road stance -->
+  <path d="M38,58 Q38,44 52,44 Q66,44 66,58" fill="#111111"/>
+  <path d="M140,58 Q140,44 154,44 Q168,44 168,58" fill="#111111"/>
+  <!-- Wheels - larger -->
+  <circle cx="52" cy="58" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="58" r="5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="154" cy="58" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="154" cy="58" r="5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

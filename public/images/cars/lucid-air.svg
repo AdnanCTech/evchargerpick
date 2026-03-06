@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Lucid Air: Luxury sedan, very low and long, smooth aerodynamic shape -->
+  <path d="M16,54 L22,54 L28,44 L42,32 L58,26 L140,26 L158,30 L170,40 L180,50 L184,54 L16,54 Z" fill="white"/>
+  <!-- Lower body / sill -->
+  <path d="M14,54 L186,54 L186,58 Q186,60 184,60 L16,60 Q14,60 14,58 Z" fill="white"/>
+  <!-- Window - long elegant sweep -->
+  <path d="M52,30 L138,30 L152,34 L164,42 L50,42 L44,36 Z" fill="#111111" opacity="0.3"/>
+  <!-- Micro LED headlight detail -->
+  <rect x="24" y="44" width="6" height="1.5" rx="0.75" fill="white" opacity="0.4"/>
+  <!-- Flowing body line -->
+  <path d="M28,46 L178,46" fill="none" stroke="white" stroke-width="0.5" opacity="0.35"/>
+  <!-- Flush door handle -->
+  <rect x="90" y="40" width="8" height="1.5" rx="0.75" fill="white" opacity="0.3"/>
+  <!-- Rear light bar -->
+  <rect x="174" y="44" width="6" height="1.5" rx="0.75" fill="white" opacity="0.4"/>
+  <!-- Wheel well cutouts -->
+  <path d="M38,60 Q38,48 50,48 Q62,48 62,60" fill="#111111"/>
+  <path d="M144,60 Q144,48 156,48 Q168,48 168,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="50" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="50" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="156" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="156" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>
