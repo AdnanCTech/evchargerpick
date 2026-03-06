@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Large pickup truck, angular, tall cab -->
+  <path d="M18,50 L24,50 L32,34 L46,20 L68,18 L112,18 L112,32 L118,32 L118,50 L18,50 Z" fill="white"/>
+  <!-- Bed -->
+  <path d="M118,32 L176,32 L180,34 L182,50 L118,50 Z" fill="white"/>
+  <!-- Bed wall -->
+  <path d="M176,24 L180,24 L182,28 L182,32 L176,32 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M14,50 L186,50 L186,58 Q186,60 184,60 L16,60 Q14,60 14,58 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M52,22 L110,22 L110,32 L48,32 L44,28 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M18,50 L14,46 L20,40 L30,38 L30,50 Z" fill="white"/>
+  <!-- Wheel wells -->
+  <path d="M36,60 Q36,46 50,46 Q64,46 64,60" fill="#111111"/>
+  <path d="M148,60 Q148,46 162,46 Q176,46 176,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="50" cy="60" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="50" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="162" cy="60" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="162" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

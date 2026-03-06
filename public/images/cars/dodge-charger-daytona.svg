@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Muscle car, wide stance, low, aggressive -->
+  <path d="M20,54 L28,54 L36,42 Q52,28 80,26 L130,26 Q155,26 165,36 L174,46 L182,50 L182,54 L20,54 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M16,54 L186,54 L186,60 Q186,62 184,62 L18,62 Q16,62 16,60 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M76,30 L126,30 Q148,30 158,40 L168,48 L72,48 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M20,54 L16,50 L22,46 L34,44 L34,54 Z" fill="white"/>
+  <!-- Rear spoiler hint -->
+  <path d="M170,36 L178,36 L180,38 L174,38 Z" fill="white"/>
+  <!-- Wheel wells -->
+  <path d="M42,62 Q42,50 54,50 Q66,50 66,62" fill="#111111"/>
+  <path d="M146,62 Q146,50 158,50 Q170,50 170,62" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="54" cy="62" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="54" cy="62" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="158" cy="62" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="158" cy="62" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

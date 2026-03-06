@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Massive SUV, squared off, tall, boxy -->
+  <path d="M18,52 L22,52 L26,30 L34,16 L60,14 L150,14 Q164,14 170,22 L176,32 L180,40 L182,52 L18,52 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M14,52 L186,52 L186,58 Q186,60 184,60 L16,60 Q14,60 14,58 Z" fill="white"/>
+  <!-- Windows -->
+  <path d="M56,18 L100,18 L100,38 L52,38 Z" fill="#111111" opacity="0.3"/>
+  <path d="M104,18 L148,18 Q158,18 164,26 L170,36 L104,36 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M18,52 L14,48 L20,40 L28,36 L28,52 Z" fill="white"/>
+  <!-- Wheel wells -->
+  <path d="M36,60 Q36,46 50,46 Q64,46 64,60" fill="#111111"/>
+  <path d="M148,60 Q148,46 162,46 Q176,46 176,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="50" cy="60" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="50" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="162" cy="60" r="10" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="162" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

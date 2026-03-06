@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Mid-size SUV, sporty, slightly taller than GV60 -->
+  <path d="M20,52 L26,52 L32,36 Q46,20 74,18 L126,18 Q150,18 162,30 L172,42 L180,46 L180,52 L20,52 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M16,52 L184,52 L184,58 Q184,60 182,60 L18,60 Q16,60 16,58 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M68,22 L122,22 Q142,22 154,34 L166,44 L64,44 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M20,52 L16,48 L22,42 L32,40 L32,52 Z" fill="white"/>
+  <!-- Wheel wells -->
+  <path d="M40,60 Q40,48 52,48 Q64,48 64,60" fill="#111111"/>
+  <path d="M144,60 Q144,48 156,48 Q168,48 168,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="52" cy="60" r="9.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="52" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="156" cy="60" r="9.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="156" cy="60" r="4.5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

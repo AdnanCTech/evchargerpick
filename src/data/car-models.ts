@@ -406,6 +406,200 @@ export const carModels: CarModel[] = [
     metaDescription:
       "Best home chargers for the Volvo EX40 (formerly XC40 Recharge). 11kW onboard charger matched to the right 48A Level 2 charger.",
   },
+  // --- Batch 3 ---
+  {
+    name: "Ford F-150 Lightning",
+    slug: "ford-f150-lightning",
+    brand: "Ford",
+    batteryKwh: 131,
+    onboardChargerKw: 11.3,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2022-2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Ford F-150 Lightning (2025) - Top 4 Picks",
+    metaDescription:
+      "Best home chargers for the Ford F-150 Lightning. 2024-2025 models have an 11.3kW onboard charger (48A) — 2022-2023 Lariat/Platinum had 19.2kW.",
+  },
+  {
+    name: "Ford Mustang Mach-E",
+    slug: "ford-mustang-mach-e",
+    brand: "Ford",
+    batteryKwh: 98.8,
+    onboardChargerKw: 11,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2023-2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Ford Mustang Mach-E (2025) - Top 5 Picks",
+    metaDescription:
+      "Find the best home EV charger for the Ford Mustang Mach-E. 11kW onboard charger matched to the right 48A Level 2 charger for overnight charging.",
+  },
+  {
+    name: "Chrysler Pacifica PHEV",
+    slug: "chrysler-pacifica-phev",
+    brand: "Chrysler",
+    batteryKwh: 16,
+    onboardChargerKw: 6.6,
+    maxAmps: 28,
+    type: "PHEV",
+    year: "2021-2024",
+    recommendedChargers: [
+      "grizzl-e-classic-40a",
+      "emporia-smart-evse-48a",
+      "lectron-v-box-48a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Chrysler Pacifica PHEV (2025) - Top 3 Picks",
+    metaDescription:
+      "You do not need an expensive charger for the Chrysler Pacifica PHEV. 6.6kW onboard charger means a budget 32A unit charges it in 2 hours.",
+  },
+  {
+    name: "Toyota bZ4X",
+    slug: "toyota-bz4x",
+    brand: "Toyota",
+    batteryKwh: 71.4,
+    onboardChargerKw: 6.6,
+    maxAmps: 28,
+    type: "BEV",
+    year: "2023-2025",
+    recommendedChargers: [
+      "grizzl-e-classic-40a",
+      "emporia-smart-evse-48a",
+      "lectron-v-box-48a",
+    ],
+    metaTitle: "Best EV Chargers for Toyota bZ4X (2025) - Top 3 Picks",
+    metaDescription:
+      "Best home chargers for the Toyota bZ4X. With a 6.6kW onboard charger, a 32A unit maxes it out. AWD models capped at 100kW DCFC.",
+  },
+  {
+    name: "Genesis GV60",
+    slug: "genesis-gv60",
+    brand: "Genesis",
+    batteryKwh: 77.4,
+    onboardChargerKw: 11,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2023-2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle: "Best EV Chargers for Genesis GV60 (2025) - Top 4 Picks",
+    metaDescription:
+      "Best home chargers for the Genesis GV60. 800V architecture with 350kW DCFC, but home L2 is limited by the 11kW onboard charger.",
+  },
+  {
+    name: "Genesis Electrified GV70",
+    slug: "genesis-electrified-gv70",
+    brand: "Genesis",
+    batteryKwh: 77.4,
+    onboardChargerKw: 11,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2023-2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Genesis Electrified GV70 (2025) - Top 4 Picks",
+    metaDescription:
+      "Best home chargers for the Genesis Electrified GV70. 11kW onboard charger, 800V architecture with 233kW DCFC. NACS coming 2026.",
+  },
+  {
+    name: "GMC Sierra EV",
+    slug: "gmc-sierra-ev",
+    brand: "GMC",
+    batteryKwh: 205,
+    onboardChargerKw: 19.2,
+    maxAmps: 80,
+    type: "BEV",
+    year: "2024-2025",
+    recommendedChargers: [
+      "chargepoint-home-flex",
+      "autel-maxicharger-50a",
+      "emporia-smart-evse-48a",
+      "lectron-v-box-48a",
+    ],
+    metaTitle: "Best EV Chargers for GMC Sierra EV (2025) - Top 4 Picks",
+    metaDescription:
+      "Home chargers for the GMC Sierra EV and its massive 205kWh battery. 19.2kW onboard charger needs a high-amperage EVSE for fastest charging.",
+  },
+  {
+    name: "Cadillac Escalade IQ",
+    slug: "cadillac-escalade-iq",
+    brand: "Cadillac",
+    batteryKwh: 200,
+    onboardChargerKw: 11.5,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Cadillac Escalade IQ (2025) - Top 4 Picks",
+    metaDescription:
+      "Best home chargers for the Cadillac Escalade IQ. 11.5kW standard or 19.2kW optional onboard charger — find out which you have.",
+  },
+  {
+    name: "Dodge Charger Daytona EV",
+    slug: "dodge-charger-daytona",
+    brand: "Dodge",
+    batteryKwh: 93.9,
+    onboardChargerKw: 11,
+    maxAmps: 48,
+    type: "BEV",
+    year: "2024-2025",
+    recommendedChargers: [
+      "lectron-v-box-48a",
+      "emporia-smart-evse-48a",
+      "chargepoint-home-flex",
+      "grizzl-e-classic-40a",
+    ],
+    metaTitle:
+      "Best EV Chargers for Dodge Charger Daytona EV (2025) - Top 4 Picks",
+    metaDescription:
+      "Best home chargers for the Dodge Charger Daytona EV. 11kW onboard charger, 400V architecture, CCS1 with NACS coming 2027.",
+  },
+  {
+    name: "Lexus RZ450e",
+    slug: "lexus-rz450e",
+    brand: "Lexus",
+    batteryKwh: 71.4,
+    onboardChargerKw: 6.6,
+    maxAmps: 28,
+    type: "BEV",
+    year: "2023-2025",
+    recommendedChargers: [
+      "grizzl-e-classic-40a",
+      "emporia-smart-evse-48a",
+      "lectron-v-box-48a",
+    ],
+    metaTitle: "Best EV Chargers for Lexus RZ450e (2025) - Top 3 Picks",
+    metaDescription:
+      "Best home chargers for the Lexus RZ450e. The 6.6kW onboard charger is the slowest in its class — save money with a 32A unit. 2026 fixes everything.",
+  },
 ];
 
 export function getCarBySlug(slug: string): CarModel | undefined {

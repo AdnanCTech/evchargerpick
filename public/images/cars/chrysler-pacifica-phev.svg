@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Minivan, long body, tall roof, sliding door lines -->
+  <path d="M18,52 L22,52 L28,36 Q38,20 58,18 L150,18 Q165,18 172,28 L178,38 L182,44 L182,52 L18,52 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M16,52 L186,52 L186,58 Q186,60 184,60 L18,60 Q16,60 16,58 Z" fill="white"/>
+  <!-- Windows -->
+  <path d="M54,22 L90,22 L90,40 L50,40 Z" fill="#111111" opacity="0.3"/>
+  <path d="M94,22 L130,22 L130,40 L94,40 Z" fill="#111111" opacity="0.3"/>
+  <path d="M134,22 L150,22 Q160,22 166,30 L170,38 L134,38 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M18,52 L16,48 L22,42 L30,40 L30,52 Z" fill="white"/>
+  <!-- Sliding door line -->
+  <line x1="92" y1="22" x2="92" y2="52" stroke="#ccc" stroke-width="0.5"/>
+  <!-- Wheel wells -->
+  <path d="M38,60 Q38,48 50,48 Q62,48 62,60" fill="#111111"/>
+  <path d="M148,60 Q148,48 160,48 Q172,48 172,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="50" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="50" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="160" cy="60" r="9" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="160" cy="60" r="4" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <!-- Body: Large pickup, bold front, wider than F-150 -->
+  <path d="M16,50 L22,50 L30,32 L44,18 L70,16 L114,16 L114,30 L120,30 L120,50 L16,50 Z" fill="white"/>
+  <!-- Bed -->
+  <path d="M120,30 L178,30 L182,32 L184,50 L120,50 Z" fill="white"/>
+  <!-- Bed wall -->
+  <path d="M178,22 L182,22 L184,26 L184,30 L178,30 Z" fill="white"/>
+  <!-- Lower body -->
+  <path d="M12,50 L188,50 L188,58 Q188,60 186,60 L14,60 Q12,60 12,58 Z" fill="white"/>
+  <!-- Window -->
+  <path d="M50,20 L112,20 L112,30 L46,30 L42,26 Z" fill="#111111" opacity="0.3"/>
+  <!-- Front detail -->
+  <path d="M16,50 L12,46 L18,38 L28,36 L28,50 Z" fill="white"/>
+  <!-- Wheel wells -->
+  <path d="M34,60 Q34,45 49,45 Q64,45 64,60" fill="#111111"/>
+  <path d="M150,60 Q150,45 165,45 Q180,45 180,60" fill="#111111"/>
+  <!-- Wheels -->
+  <circle cx="49" cy="60" r="10.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="49" cy="60" r="5" fill="#333" stroke="white" stroke-width="0.8"/>
+  <circle cx="165" cy="60" r="10.5" fill="#111111" stroke="white" stroke-width="1.5"/>
+  <circle cx="165" cy="60" r="5" fill="#333" stroke="white" stroke-width="0.8"/>
+</svg>

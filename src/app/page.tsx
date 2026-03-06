@@ -26,6 +26,16 @@ const carSvgMap: Record<string, string> = {
   "mercedes-eqs": "/images/cars/mercedes-eqs.svg",
   "subaru-solterra": "/images/cars/subaru-solterra.svg",
   "volvo-ex40": "/images/cars/volvo-ex40.svg",
+  "ford-f150-lightning": "/images/cars/ford-f150-lightning.svg",
+  "ford-mustang-mach-e": "/images/cars/ford-mustang-mach-e.svg",
+  "chrysler-pacifica-phev": "/images/cars/chrysler-pacifica-phev.svg",
+  "toyota-bz4x": "/images/cars/toyota-bz4x.svg",
+  "genesis-gv60": "/images/cars/genesis-gv60.svg",
+  "genesis-electrified-gv70": "/images/cars/genesis-gv70-electrified.svg",
+  "gmc-sierra-ev": "/images/cars/gmc-sierra-ev.svg",
+  "cadillac-escalade-iq": "/images/cars/cadillac-escalade-iq.svg",
+  "dodge-charger-daytona": "/images/cars/dodge-charger-daytona.svg",
+  "lexus-rz450e": "/images/cars/lexus-rz450e.svg",
 };
 
 const chargerSvgMap: Record<string, string> = {
