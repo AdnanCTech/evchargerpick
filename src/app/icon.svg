@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="7" fill="url(#eg)"/>
+
+  <!-- Lightning bolt (EV charging) -->
+  <path d="M18.5 5L11 17.5H15.5L13.5 27L21 14.5H16.5L18.5 5Z" fill="white"/>
+
+  <!-- Plug prongs -->
+  <rect x="9" y="10" width="2" height="5" rx="1" fill="white" opacity="0.5"/>
+  <rect x="21" y="10" width="2" height="5" rx="1" fill="white" opacity="0.5"/>
+
+  <defs>
+    <linearGradient id="eg" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10B981"/>
+      <stop offset="1" stop-color="#047857"/>
+    </linearGradient>
+  </defs>
+</svg>
