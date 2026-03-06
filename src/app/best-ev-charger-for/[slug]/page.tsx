@@ -537,6 +537,23 @@ export default async function CarModelPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Gumroad CTA */}
+        <section className="mt-16 rounded-xl border border-green-500/20 bg-green-500/5 p-6 sm:p-8">
+          <h3 className="text-lg font-semibold text-zinc-100">Get the complete EV charger decision guide</h3>
+          <p className="mt-2 text-sm text-zinc-400 leading-relaxed">
+            All our charger research in one printable PDF. Comparison tables, a decision flowchart based on your car&apos;s onboard charger, electrical requirements, installation cost calculator, and a guide to rebates and tax credits that could save you $400+.
+          </p>
+          <a
+            href="https://insensate.gumroad.com/l/ev-home-charger-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-lg bg-green-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-green-500"
+          >
+            Get the PDF — $4.99
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </section>
+
         {/* Affiliate Disclosure */}
         <div className="mt-24 text-[11px] text-zinc-600 border-t border-[#2a2a2a] pt-8">
           <strong className="text-zinc-500">Affiliate Disclosure:</strong>{" "}
