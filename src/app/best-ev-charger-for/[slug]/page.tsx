@@ -165,8 +165,9 @@ function ChargerReview({
 
           <a
             href={charger.affiliateUrl}
+            target="_blank"
             className="inline-flex items-center gap-1.5 mt-5 text-sm font-medium text-green-500 hover:text-green-400 transition"
-            rel="nofollow noopener"
+            rel="nofollow noopener noreferrer sponsored"
           >
             {getStoreLabel(charger.affiliateUrl)}
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -346,8 +347,9 @@ export default async function CarModelPage({ params }: Props) {
           </p>
           <a
             href={topCharger.affiliateUrl}
+            target="_blank"
             className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium text-green-500 hover:text-green-400 transition"
-            rel="nofollow noopener"
+            rel="nofollow noopener noreferrer sponsored"
           >
             {getStoreLabel(topCharger.affiliateUrl)}
             <ArrowUpRight className="w-3.5 h-3.5" />
