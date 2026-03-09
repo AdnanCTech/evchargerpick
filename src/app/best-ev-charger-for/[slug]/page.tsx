@@ -76,12 +76,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: car.metaTitle,
     description: car.metaDescription,
     alternates: {
-      canonical: `https://evchargerpick.com/best-ev-charger-for/${car.slug}`,
+      canonical: `https://www.evchargerpick.com/best-ev-charger-for/${car.slug}`,
     },
     openGraph: {
       title: car.metaTitle,
       description: car.metaDescription,
-      url: `https://evchargerpick.com/best-ev-charger-for/${car.slug}`,
+      url: `https://www.evchargerpick.com/best-ev-charger-for/${car.slug}`,
       type: "article",
     },
   };

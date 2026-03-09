@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Calculate exactly how long it takes to charge your EV at home. Select your car model and charger to see charge time, cost estimate, and Level 1 vs Level 2 comparison.",
   alternates: {
-    canonical: "https://evchargerpick.com/calculator",
+    canonical: "https://www.evchargerpick.com/calculator",
   },
   openGraph: {
     title: "EV Charging Time Calculator",
     description:
       "Calculate how long it takes to charge your EV at home with any charger.",
-    url: "https://evchargerpick.com/calculator",
+    url: "https://www.evchargerpick.com/calculator",
   },
 };
 

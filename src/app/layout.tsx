@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Compare the best home EV chargers for your specific car model. Expert reviews, charging time calculators, and side-by-side comparisons.",
-  metadataBase: new URL("https://evchargerpick.com"),
+  metadataBase: new URL("https://www.evchargerpick.com"),
   openGraph: {
     type: "website",
     locale: "en_US",

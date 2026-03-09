@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "How to Charge an EV at an Apartment (2026 Guide)",
   description:
     "Complete guide to charging your electric car at an apartment or condo. Level 1 vs Level 2 options, talking to your landlord, right-to-charge laws, public charging strategies, and the best portable chargers for renters.",
-  alternates: { canonical: "https://evchargerpick.com/guides/apartment-ev-charging" },
+  alternates: { canonical: "https://www.evchargerpick.com/guides/apartment-ev-charging" },
 };
 
 function SectionTitle({ children }: { children: React.ReactNode }) {

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { carModels } from "@/data/car-models";
 import { comparisons } from "@/data/comparisons";
 
-const BASE_URL = "https://evchargerpick.com";
+const BASE_URL = "https://www.evchargerpick.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
